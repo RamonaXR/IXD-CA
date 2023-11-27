@@ -16,7 +16,7 @@ for (let i = 0; i < products.length; i++) {
                                 <p>${product[i].gender}</p>
                                 <p><span class="price">$ ${product[i].price}</span></p>
                                 <div class="button-product">
-                                    <a href="./../../Spesific.HTML?id=${product[i].id}" class="button">Check it out</a>
+                                    <a href="./../../spesific.html?id=${product[i].id}" class="button">Check it out</a>
                                 </div>
                             </section>`;
 }
