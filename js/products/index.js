@@ -22,7 +22,7 @@ function renderJackets(jackets) {
 
 
 switch (location.pathname) {
-    case "/product.html":  //Will not load on liveserver, but I am aware of why and what to do different in the future.
+    case "/product":  //Will not load on liveserver, but I am aware of why and what to do different in the future.
         try {
             createHtmlHome (products, lightweight);
         } catch (error) {
@@ -30,7 +30,7 @@ switch (location.pathname) {
             console.log("Ups, an error occured");
         }
         break; 
-    case "/spesific.html": //Same issue as on product. I am aware of why and in the future I will make a better filestructure.
+    case "/spesific": //Same issue as on product. I am aware of why and in the future I will make a better filestructure.
         fetchProduct();
         break;
     default:
