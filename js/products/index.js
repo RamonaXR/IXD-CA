@@ -30,7 +30,7 @@ switch (location.pathname) {
             console.log("Ups, an error occured");
         }
         break; 
-    case "/spesific": //Same issue as on product. I am aware of why and in the future I will make a better filestructure.
+    case "/spesific.html": //Same issue as on product. I am aware of why and in the future I will make a better filestructure.
         fetchProduct();
         break;
     default:
