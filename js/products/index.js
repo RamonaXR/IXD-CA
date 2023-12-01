@@ -2,7 +2,8 @@ import { createHtmlHome, products } from "./../renderHTML/renderHtmlHome.js";
 import { getProductIdFromURL } from "../utility/productUtility.js";
 import { fetchProduct } from "../data/fetchSingle.js";
 import { selectJackets } from "../data/selectJackets.js";
-
+import { displayProductDetails, products } from "./checkout.js";
+import { fetchProductDetails } from "./checkout.js";
 
 export const lightweight = document.querySelector(".lightweight-products");
 
@@ -23,7 +24,7 @@ function renderJackets(jackets) {
 
 
 switch (location.pathname) {
-    case "/product.html":  //Will not load on liveserver, but I am aware of why and what to do different in the future.
+    case "/product":  //Will not load on liveserver, but I am aware of why and what to do different in the future.
         try {
             createHtmlHome (products, lightweight);
         } catch (error) {
@@ -31,7 +32,7 @@ switch (location.pathname) {
             console.log("Ups, an error occured");
         }
         break; 
-    case "/spesific.html": //Same issue as on product. I am aware of why and in the future I will make a better filestructure.
+    case "/spesific": //Same issue as on product. I am aware of why and in the future I will make a better filestructure.
         fetchProduct();
         break;
     default:
