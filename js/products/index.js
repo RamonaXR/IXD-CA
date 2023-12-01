@@ -3,6 +3,7 @@ import { getProductIdFromURL } from "../utility/productUtility.js";
 import { fetchProduct } from "../data/fetchSingle.js";
 import { selectJackets } from "../data/selectJackets.js";
 
+
 export const lightweight = document.querySelector(".lightweight-products");
 
 const id = getProductIdFromURL();
@@ -22,7 +23,7 @@ function renderJackets(jackets) {
 
 
 switch (location.pathname) {
-    case "/product":  //Will not load on liveserver, but I am aware of why and what to do different in the future.
+    case "/product.html":  //Will not load on liveserver, but I am aware of why and what to do different in the future.
         try {
             createHtmlHome (products, lightweight);
         } catch (error) {
