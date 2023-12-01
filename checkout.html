@@ -26,11 +26,7 @@
     />
     <link href="CSS/styles.css" rel="stylesheet" />
     <script defer type="module" src="./js/products/checkout.js"></script>
-    <script
-      defer
-      type="module"
-      src="js/products/utility/productUtility.js"
-    ></script>
+    <script defer type="module" src="./js/utility/productUtility.js"></script>
   </head>
   <body>
     <header>
@@ -76,8 +72,12 @@
       <section class="flex flex-1 flex-wrap container">
         <section class="flex flex-1 checkout">
           <h1 class="flex cart-left">Your cart</h1>
-          <div class="flex image-cart">Loading...</div>
-          <div class="flex jacket-info">Loading...</div>
+          <div id="productImageContainer" class="flex image-cart">
+            Loading...
+          </div>
+          <div id="productInfoContainer" class="flex jacket-info">
+            Loading...
+          </div>
         </section>
         <section class="flex flex-1 checkout">
           <h2 class="flex cart-left">Checkout</h2>
