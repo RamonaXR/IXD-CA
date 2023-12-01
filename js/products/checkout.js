@@ -1,7 +1,9 @@
-import { getProductIdFromURL } from "./utility/productUtility.js";
+import { getProductIdFromURL } from "../utility/productUtility.js";
+
+
 
 export async function fetchProductDetails() {
-  const productId = getProductIdFromURL();
+const productId = getProductIdFromURL();
   const url = `https://api.noroff.dev/api/v1/rainy-days/${productId}`;
   try {
     const response = await fetch(url);
@@ -13,8 +15,8 @@ export async function fetchProductDetails() {
 }
 
 export function displayProductDetails(product) {
-  const productImageContainer = document.getElementById("productImageContainer");
-  const productInfoContainer = document.getElementById("productInfoContainer");
+  const productImageContainer = document.getElementById(".flex image-cart");
+  const productInfoContainer = document.getElementById(".flex jacket-info");
 
   productImageContainer.innerHTML = `<img src="${product.image}" alt="${product.title}" />`;
   productInfoContainer.innerHTML = `
