@@ -2,7 +2,7 @@ import { createHtmlHome, products } from "./../renderHTML/renderHtmlHome.js";
 import { getProductIdFromURL } from "../utility/productUtility.js";
 import { fetchProduct } from "../data/fetchSingle.js";
 import { selectJackets } from "../data/selectJackets.js";
-import { displayProductDetails, products } from "./checkout.js";
+import { displayProductDetails} from "./checkout.js";
 import { fetchProductDetails } from "./checkout.js";
 
 export const lightweight = document.querySelector(".lightweight-products");
