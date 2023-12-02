@@ -3,11 +3,12 @@ import { getProductIdFromURL } from "../utility/productUtility.js";
 import { fetchProduct } from "../data/fetchSingle.js";
 import { selectJackets } from "../data/selectJackets.js";
 import { displayProductDetails} from "./checkout.js";
-import { fetchProductDetails } from "./checkout.js";
+import { saveToStorage } from "../localStorage/button.js";
+// import { fetchProductDetails } from "./checkout.js";
 
 export const lightweight = document.querySelector(".lightweight-products");
 
-const id = getProductIdFromURL();
+export const id = getProductIdFromURL();
 export const spesificContainer = document.querySelector(".container-spesific");
 export const url = "https://api.noroff.dev/api/v1/rainy-days/" + id;
 
@@ -38,7 +39,11 @@ switch (removeSlashAndHtml(location.pathname))  {
         }
         break; 
     case "spesific": //Same issue as on product. I am aware of why and in the future I will make a better filestructure.
-        fetchProduct();
+        fetchProduct(url);
+        setTimeout (function() {
+            const buyNowButton = document.querySelector(".cta-add-to-cart");
+            buyNowButton.addEventListener ("click", saveToStorage);
+        }, 1000)
         break;
     default:
         try {

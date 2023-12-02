@@ -1,6 +1,6 @@
 // Fetch jackets
 
-const url = "https://api.noroff.dev/api/v1/rainy-days";
+export const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 export async function getProducts() {
     const response = await fetch(url); 

@@ -11,7 +11,7 @@ export function createJacket(product, parent) {
 <span class="gender">${product.gender}</span>
 <div class="flex sizes">
   <label for="sizes">Pick your size:</label>
-  <select class="sticky" name="sizes" id="sizes">
+  <select class="sticky send-size" name="sizes" id="sizes">
       <option value="XS">${product.sizes[0]}</option>
       <option value="S">${product.sizes[1]}</option>
       <option value="M">${product.sizes[2]}</option>
@@ -20,7 +20,8 @@ export function createJacket(product, parent) {
       <option value="XXL">${product.sizes[5]}</option>
   </select>
   </div>
-  <a href="checkout.html" class="button">Add to cart</a>
+  <button class="button cta-add-to-cart">Add to cart</button>
+
   <div class="flex delivery">
           <img src="Images/Delivery.png" alt="Icon" />
           <p>Always free shipping!</p>

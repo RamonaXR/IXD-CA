@@ -1,10 +1,10 @@
 import { createJacket } from "./../renderHTML/createJacket.js";
-import { url, spesificContainer } from "../products/index.js";
+import { spesificContainer } from "../products/index.js";
 import { title } from "../products/index.js";
 
 // Single jacket 
 
-export async function fetchProduct () {
+export async function fetchProduct (url) {
     try {
         const response = await fetch(url);
         const details = await response.json();
