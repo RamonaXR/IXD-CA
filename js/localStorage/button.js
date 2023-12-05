@@ -12,11 +12,17 @@ async function fetchProduct (url) {
     
 }
 
-const product = await fetchProduct (newUrl);
+export const product = await fetchProduct (newUrl);
 console.log(product);
-export function saveToStorage () {
-    const size = document.querySelector(".send-size option");
-    localStorage.setItem (`product${product.title}`, id);
-    localStorage.setItem (`size${product.title}`, size.input);
+// export function saveToStorage () {
+//     const size = document.querySelector(".send-size option");
+//     localStorage.setItem (`product${product.title}`, id);
+//     console.log(size);
+//     if (size.value.trim() !== "") {
+//         localStorage.setItem(`size${product.title}`, size.value);
+//     }
 
-}
+// }
+
+
+

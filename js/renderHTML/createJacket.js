@@ -20,7 +20,7 @@ export function createJacket(product, parent) {
       <option value="XXL">${product.sizes[5]}</option>
   </select>
   </div>
-  <button class="button cta-add-to-cart">Add to cart</button>
+  <button class="button cta-add-to-cart" id="checkout-btn">Add to cart</button>
 
   <div class="flex delivery">
           <img src="Images/Delivery.png" alt="Icon" />

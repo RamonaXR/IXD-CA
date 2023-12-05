@@ -2,8 +2,7 @@ import { createHtmlHome, products } from "./../renderHTML/renderHtmlHome.js";
 import { getProductIdFromURL } from "../utility/productUtility.js";
 import { fetchProduct } from "../data/fetchSingle.js";
 import { selectJackets } from "../data/selectJackets.js";
-import { displayProductDetails} from "./checkout.js";
-import { saveToStorage } from "../localStorage/button.js";
+import { product } from "../localStorage/button.js";
 // import { fetchProductDetails } from "./checkout.js";
 
 export const lightweight = document.querySelector(".lightweight-products");
@@ -40,9 +39,20 @@ switch (removeSlashAndHtml(location.pathname))  {
         break; 
     case "spesific": //Same issue as on product. I am aware of why and in the future I will make a better filestructure.
         fetchProduct(url);
-        setTimeout (function() {
-            const buyNowButton = document.querySelector(".cta-add-to-cart");
-            buyNowButton.addEventListener ("click", saveToStorage);
+        // setTimeout (function() {
+        //     const buyNowButton = document.querySelector(".cta-add-to-cart");
+        //     buyNowButton.addEventListener ("click", saveToStorage);
+        // }, 1000)
+        setTimeout(function(){
+            document.getElementById("checkout-btn").addEventListener("click", function () {
+                let selectedSize = document.getElementById("sizes").value;
+            
+                if (selectedSize.trim() !== "") {
+                    localStorage.setItem(`size${product.title}`, selectedSize);
+            
+                }
+                localStorage.setItem(`product${product.title}`, product.id);
+            })
         }, 1000)
         break;
     default:

@@ -1,19 +1,7 @@
-import { getProductIdFromURL } from "../utility/productUtility.js";
+import { getProducts } from "./../data/fetchAPI.js"
 
+const products = getProducts();
 
-
-//export async function fetchProductDetails() {
-// const productId = getProductIdFromURL();
-// console.log(productId);
-//   const url = "https://api.noroff.dev/api/v1/rainy-days/" + productId;
-//   try {
-//     const response = await fetch(url);
-//     const product = await response.json();
-//     displayProductDetails(product);
-//   } catch (error) {
-//     console.error("Error fetching product details:", error);
-//   }
-// }
 
 export function displayProductDetails(product) {
   const productImageContainer = document.getElementById("productImageContainer");
@@ -29,4 +17,8 @@ export function displayProductDetails(product) {
   `;
 }
 
-// fetchProductDetails();
+
+
+function checkCart(){
+    for (let i = 0;)
+}
