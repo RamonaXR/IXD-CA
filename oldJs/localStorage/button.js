@@ -1,5 +1,5 @@
 import { getProductIdFromURL } from "../utility/productUtility.js";
-import { url } from "../data/fetchAPI.js";
+import { url } from "../../oldJs/data/fetchAPI.js";
 
 const id = getProductIdFromURL ();
 const newUrl = url + "/" + id;

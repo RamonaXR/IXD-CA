@@ -1,8 +1,13 @@
-import { createJacket } from "./../renderHTML/createJacket.js";
-import { spesificContainer } from "../products/index.js";
-import { title } from "../products/index.js";
-
+import { createJacket } from "../../js/renderHTML/createJacket.js";
+import { getProductIdFromURL } from "../../js/utility/productUtility.js";
+import { url } from "./fetchAPI.js";
 // Single jacket 
+
+const id = getProductIdFromURL();
+console.log(id);
+export const newURL = url + "/" + id; 
+console.log(newURL);
+
 
 export async function fetchProduct (url) {
     try {
@@ -10,7 +15,7 @@ export async function fetchProduct (url) {
         const details = await response.json();
         createJacket(details, spesificContainer);
         title.innerHTML = `Rainy Days | ${details.title}`;
-      return details;
+    return details;
     } catch (error) {
         console.log(error);
         spesificContainer.innerHTML = `<div class="error">Ups, an error occurred while loading this page.</div>`;
