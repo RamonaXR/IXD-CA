@@ -1,12 +1,13 @@
 import { createHome } from "./pages/home.js";
 import { createProducts } from "./pages/products.js";
+import { createSpecific } from "./pages/specific.js";
 
 switch (removeSlashAndHtml(location.pathname)) {
     case "product":
         createProducts();
         break;
     case "specific":
-        //Code here
+        createSpecific();
         break; 
     case "checkout":
         //Code here
