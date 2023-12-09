@@ -24,8 +24,6 @@ switch (removeSlashAndHtml(location.pathname)) {
     case "index":
     case "/":
         createHome();
-        break;
-
 
 }
 
