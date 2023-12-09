@@ -1,6 +1,6 @@
 import { renderJacketsHome } from "../rendering/renderHome.js";
 import { url } from "../data/constants.js";
-import { fetchData } from "../data/fetchAPI.js";
+import { fetchData } from "../data/fetchApi.js";
 
 export async function createHome(){
     try {
