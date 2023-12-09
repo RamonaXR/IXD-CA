@@ -22,10 +22,12 @@ switch (removeSlashAndHtml(location.pathname)) {
         //Code here
         break;
     case "index":
-    case "/":
         createHome();
-
 }
+
+if (location.pathname === "/"){
+    createHome();
+} 
 
 function removeSlashAndHtml(inputString) {
     let modifiedString = inputString.replace(/\//g, '').replace(/\.html/g, '');
