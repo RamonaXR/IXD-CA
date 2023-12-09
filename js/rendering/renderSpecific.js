@@ -64,8 +64,43 @@ export function renderSpecific(jacket){
     btn.setAttribute("id", "checkout-btn");
     btn.textContent = "Add to cart";
     secondConatiner.append(btn);
+
+    const childContainer = document.createElement("div");
+    childContainer.classList.add("flex", "delivery");
     
+    const childImage1 = document.createElement("img");
+    childImage1.src = "./Images/Delivery.png";
+    childImage1.setAttribute("alt", "Icon");
+    childContainer.append(childImage1);
+
+    const child1Paragraph = document.createElement("p");
+    child1Paragraph.textContent = "Always free shipping!";
+    childContainer.append(child1Paragraph);
     
+    secondConatiner.append(childContainer);
+
+    const childContainer2 = document.createElement("div");
+    childContainer2.classList.add("flex", "delivery");
+
+    const childImage2 = document.createElement("img");
+    childImage2.src = "./Images/Return.png";
+    childImage2.setAttribute("alt", "Icon");
+    childContainer2.append(childImage2);
+
+    const child2Paragraph = document.createElement("p");
+    child2Paragraph.textContent = "Free 30-day return policy";
+    childContainer2.append(child2Paragraph);
+
+    secondConatiner.append(childContainer2);
+
+    const childContainer3 = document.createElement("div");
+
+    const childImage3 = document.createElement("img");
+    childImage3.src = "./Images/Stars.svg";
+    childImage3.setAttribute("alt", "stars");
+    childContainer3.append(childImage3);
+
+    secondConatiner.append(childContainer3);
 
 
     parent.append(element);
