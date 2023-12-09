@@ -59,6 +59,10 @@ body {
       background-color:#d9bea9;
       color:#2a2e34;
     }
+
+  .hidden {
+    display: none;
+  }
   
   .price {
     font-size: 1.5em;
