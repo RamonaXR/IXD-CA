@@ -2,6 +2,7 @@ import { createHome } from "./pages/home.js";
 import { createProducts } from "./pages/products.js";
 import { createSpecific } from "./pages/specific.js";
 import { addToCart } from "./localStorage/button.js";
+import { createCheckout } from "./pages/checkout.js";
 
 switch (removeSlashAndHtml(location.pathname)) {
     case "product":
@@ -12,7 +13,7 @@ switch (removeSlashAndHtml(location.pathname)) {
         setTimeout(addToCart, 1000);
         break; 
     case "checkout":
-        //Code here
+        createCheckout();
         break;
     case "contact":
         //Code here

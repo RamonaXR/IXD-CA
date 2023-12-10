@@ -381,6 +381,41 @@ body {
   }
   
   /*Checkout*/
+
+  .cart-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cart-wrap{
+    display: flex;
+    justify-content: flex-end;
+    width: 50vw;
+    border: 2px solid black;
+    margin-left: 20px;
+    padding: 10px;
+  }
+
+
+  .cart-wrap img{
+    height: 100px;
+    
+  }
+
+  .cart-info-wrap{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    flex: 2;
+    
+    
+  }
+
+  .cart-info-wrap div{
+    display: flex;
+    gap: 50px;
+  }
   
   .checkout {
     flex: 1 0 350px;
