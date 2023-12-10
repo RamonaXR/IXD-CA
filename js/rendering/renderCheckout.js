@@ -43,6 +43,7 @@ export function renderCheckout(jacket, cart){
 
     cartSummary.innerHTML = "";
     const element = document.createElement("div");
+    element.classList.add("checkout-wrap");
 
     const totalPrice = document.createElement("span");
     totalPrice.textContent = "total price: $ " + sum;

@@ -382,6 +382,11 @@ body {
   
   /*Checkout*/
 
+  .checkout-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
   .cart-content{
     flex-wrap: wrap;
     flex-direction: column;
@@ -395,12 +400,12 @@ body {
     border: 2px solid black;
     margin-left: 20px;
     padding: 10px;
+    
   }
 
 
   .cart-wrap img{
     height: 100px;
-    
   }
 
   .cart-info-wrap{
@@ -660,10 +665,27 @@ body {
     background: rgba(255, 0, 0, 0.1);
   }
   
+
+
+
+
   @media (max-width: 800px) {
     .homejackets {
       flex-direction: column;
     }
+    
+    .cart-wrap {
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+
+    .cart-wrap img {
+      padding: 10px;
+    }
+
+    
+    
   }
   
   @media only screen and (max-width: 600px) {
