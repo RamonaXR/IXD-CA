@@ -2,7 +2,7 @@
 
 export async function renderJacketsHome(products){
     const container = document.querySelector(".homepage-jackets");
-    console.log(container);
+    
 
     container.innerHTML = "";
     for (let i = 0; i < 3; i++){

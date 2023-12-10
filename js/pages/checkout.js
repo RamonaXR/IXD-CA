@@ -4,11 +4,8 @@ import { url } from "../data/constants.js";
 
 export async function createCheckout(){
     const products = await fetchData(url);
-    console.log(products);
     const cart = checkStorage(products);
-    console.log(cart);
     const productsInCart = await fetchProduct(cart);
-    console.log(productsInCart);
     setTimeout(renderCheckout(productsInCart, cart), 1000);
 
 }
