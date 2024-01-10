@@ -52,10 +52,10 @@ export function renderSpecific(jacket){
     sizeSelect.setAttribute("id", "sizes");
     sizeContainer.append(sizeSelect);
 
-    for (let i = 0; i < jacket.attributes.length; i++){
+    for (let i = 0; i < jacket.attributes[0].terms.length; i++){
         const option = document.createElement("option");
-        option.setAttribute("value", jacket.attributes[i].terms[0]);
-        option.textContent = jacket.attributes[i];
+        option.setAttribute("value", jacket.attributes[0].terms[i].name);
+        option.textContent = jacket.attributes[0].terms[i].name;
         sizeSelect.append(option);
     }
 
