@@ -7,27 +7,27 @@ export function renderProducts(products){
         element.classList.add("jackets");
     
         const heading = document.createElement("h2");
-        heading.textContent = products[i].title; 
+        heading.textContent = products[i].name; 
         heading.classList.add("h2-jackets");
         element.append(heading);
 
         const image = document.createElement("img");
-        image.src = products[i].image;
-        image.setAttribute("alt", `This is our ${products[i].title} jacket`);
+        image.src = products[i].images[0].src;
+        image.setAttribute("alt", products[i].images[0].alt);
         image.classList.add("product-jackets");
         element.append(image);
 
         const description = document.createElement("p");
-        description.textContent = products[i].description;
+        description.innerHTML = products[i].description;
         description.classList.add("producttext");
         element.append(description);
 
         const gender = document.createElement("span");
-        gender.textContent = products[i].gender;
+        gender.textContent = products[i].categories[0].name;
         element.append(gender);
 
         const price = document.createElement("span");
-        price.textContent = products[i].price;
+        price.textContent = products[i].prices.currency_prefix + products[i].prices.price / 100;
         price.classList.add("price");
         element.append(price); 
 

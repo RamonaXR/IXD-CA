@@ -7,12 +7,12 @@ export function renderSpecific(jacket){
     element.classList.add("flex", "flex-1", "flex-wrap", "left-side");
 
     const heading = document.createElement("h1");
-    heading.textContent = jacket.title;
+    heading.textContent = jacket.name;
     element.append(heading);
 
     const image = document.createElement("img");
-    image.src = jacket.image;
-    image.setAttribute("alt", "One of our finest " + jacket.title);
+    image.src = jacket.images[0].src;
+    image.setAttribute("alt", "One of our finest " + jacket.name);
     element.append(image);
 
     const secondConatiner = document.createElement("div");
@@ -24,16 +24,16 @@ export function renderSpecific(jacket){
 
     const childParagraph = document.createElement("p");
     childParagraph.classList.add("p-spes");
-    childParagraph.textContent = jacket.description;
+    childParagraph.innerHTML = jacket.description;
     firstChildContainer.append(childParagraph);
 
     const price = document.createElement("span");
-    price.textContent = "$ " + jacket.price;
+    price.textContent = jacket.prices.currency_prefix + jacket.prices.price / 100;
     price.classList.add("price");
     secondConatiner.append(price);
 
     const gender = document.createElement("span");
-    gender.textContent = jacket.gender;
+    gender.textContent = jacket.categories[0].name;
     gender.classList.add("gender");
     secondConatiner.append(gender);
 
@@ -52,10 +52,10 @@ export function renderSpecific(jacket){
     sizeSelect.setAttribute("id", "sizes");
     sizeContainer.append(sizeSelect);
 
-    for (let i = 0; i < jacket.sizes.length; i++){
+    for (let i = 0; i < jacket.attributes.length; i++){
         const option = document.createElement("option");
-        option.setAttribute("value", jacket.sizes[i]);
-        option.textContent = jacket.sizes[i];
+        option.setAttribute("value", jacket.attributes[i].terms[0]);
+        option.textContent = jacket.attributes[i];
         sizeSelect.append(option);
     }
 

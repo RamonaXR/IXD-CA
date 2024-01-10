@@ -1,3 +1,3 @@
-export const host = "https://api.noroff.dev/";
-export const endpoint = "api/v1/rainy-days";
+export const host = "https://cms-ca.ramonaelise.one";
+export const endpoint = "/wp-json/wc/store/products";
 export const url = host + endpoint; 

@@ -6,6 +6,7 @@ export async function createHome(){
     try {
         const products = await fetchData(url);
         renderJacketsHome(products);
+        console.log(products);
     } catch (error) {
         console.log(error);
         
