@@ -16,28 +16,32 @@ This is my cross-course project, where the brief was to make a jackets e-commerc
 
 ## Getting Started
 
-### Installing
+### Prerequisites
 
-1. Clone the repo:
+-   Git
+-   A modern web browser
+-   Visual Studio Code (VS Code) with the Live Server extension for optimal local development experience
+
+### Local Setup
+
+To get the website running locally:
+
+1. **Clone the repository:**
 
 ```bash
 git clone git@github.com:RamonaXR/IXD-CA.git
 ```
 
-2. Install the dependencies:
+2.  **Open the project in VS Code:**
+    Use VS Code to open the cloned project directory.
 
-```
-npm install
-```
-
-### Running
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
+3.  **Launch with Live Server:**
+    Right-click index.html in VS Code and select Open with Live Server. This will serve the website locally and open it in your default web browser.
 
 ## Contact
+
+For questions or to connect, reach out through LinkedIn.
+
+Your feedback and contributions are greatly appreciated.
 
 [My LinkedIn page](https://www.linkedin.com/in/ramona-jensen-9994362b8/)
